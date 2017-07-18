@@ -1,4 +1,6 @@
 <?php
+include '../Sesiones.php';
+
 include '../Header.php';
 include '../Footer.php';
 include '../ConexionDB.php';

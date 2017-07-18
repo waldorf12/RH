@@ -24,7 +24,7 @@ session_start();
   }
   if ($_POST["Usuario"] == '' || $_POST["Password"] == '' )
    {
-     header('Location: ErrorIndex.php?Mensaje=Usuario o contraseña estan vacios');
+     header('Location: production/page_403.php?Mensaje=Usuario o contraseña estan vacios');
        session_destroy();
 
   exit;
@@ -56,7 +56,7 @@ session_start();
 	    echo "Bienvenido! " . $_SESSION['username'];
 	     header('Location: production/index.php');
 	 } else {
-	    header('Location: ErrorIndex.php?Mensaje=Usuario o contraseña incorrecta');
+	    header('Location: production/page_403.php?Mensaje=Usuario o contraseña incorrecta');
 
     // echo "error";
 

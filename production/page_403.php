@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>RH -FING ! </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,11 +28,24 @@
           <div class="col-middle">
             <div class="text-center text-center">
               <h1 class="error-number">403</h1>
-              <h2>Access denied</h2>
-              <p>Full authentication is required to access this resource. <a href="#">Report this?</a>
+              <h2>Acceso Denegado</h2>
+              <p> <?php
+
+              if (isset($_GET["Mensaje"]))
+               {
+                 $Mensaje = $_GET["Mensaje"];
+                echo '<div class="alert alert-warning" role="alert" style="font-size: 250%;">¡'.$Mensaje.'!</div>';
+              }
+              else {
+                echo '<div class="alert alert-danger" role="alert">Error</div>';
+              }
+
+
+
+               ?> <a href="../index.html"><b>Regresar</b></a>
               </p>
               <div class="mid_center">
-                <h3>Search</h3>
+                <!-- <h3>Search</h3>
                 <form>
                   <div class="col-xs-12 form-group pull-right top_search">
                     <div class="input-group">
@@ -42,7 +55,7 @@
                           </span>
                     </div>
                   </div>
-                </form>
+                </form> -->
               </div>
             </div>
           </div>

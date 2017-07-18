@@ -1,5 +1,15 @@
 <?php
 
+// include '../ConexionDB.php';
+
+if (isset($_SESSION['username']))
+{
+  $NombreUsuario = $_SESSION['username'];
+}
+else {
+  $NombreUsuario = 'No identificado';
+}
+
 $LeftBar = '  <div class="left_col scroll-view">
     <div class="navbar nav_title" style="border: 0;">
       <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>RH - FING !</span></a>
@@ -13,8 +23,8 @@ $LeftBar = '  <div class="left_col scroll-view">
         <img src="images/img.jpg" alt="..." class="img-circle profile_img">
       </div>
       <div class="profile_info">
-        <span>Welcome,</span>
-        <h2>John Doe</h2>
+        <span>Bienvenido/a</span>
+        <h2>'.$NombreUsuario.'</h2>
       </div>
     </div>
     <!-- /menu profile quick info -->
@@ -143,5 +153,7 @@ $LeftBar = '  <div class="left_col scroll-view">
     <!-- /menu footer buttons -->
   </div>'
 ;
+
+mysqli_close($conexion);
 
  ?>
