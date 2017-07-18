@@ -726,10 +726,7 @@ include '../Scripts.php';
 
         <!-- footer content -->
         <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
+<?php echo $Footer; ?>
         </footer>
         <!-- /footer content -->
       </div>
