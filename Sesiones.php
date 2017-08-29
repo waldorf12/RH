@@ -4,7 +4,7 @@ session_start();
 	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
 	} else {
-	      header('Location: page_403.php?Mensaje=No Existe sesión');
+	      header('Location: ../page_403.php?Mensaje=No Existe sesión');
 
 	exit;
 	}
@@ -18,7 +18,7 @@ session_start();
 	if($now > $_SESSION['expire']) {
 	session_destroy();
 
-     header('Location: page_403.php?Mensaje=Tiempo Agotado');
+     header('Location: ../page_403.php?Mensaje=Tiempo Agotado');
 	exit;
 	}
 
